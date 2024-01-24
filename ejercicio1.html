@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let numeroDeElementos = parseInt(prompt("Ingresar el número de elementos que desea manipular"));
+        let serieFibonacci = [0, 1];
+        while (isNaN(numeroDeElementos) || typeof numeroDeElementos !== 'number' || numeroDeElementos < 3) {
+            numeroDeElementos = parseInt(prompt("Ingresar el número de elementos que desea manipular"));
+        }
+        for (let i = 2; i < numeroDeElementos; i++) {
+            serieFibonacci[i] = serieFibonacci[i - 1] + serieFibonacci[i - 2];
+        }
+        console.log(serieFibonacci.join(","));
+    </script>
+</body>
+
+</html>
