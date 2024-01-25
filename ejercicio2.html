@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let input = prompt("Ingresar los elementos deseados. Presionar 0 para finalizar");
+        let elementos = [];
+        let numeros = [];
+        while (input != 0) {
+            elementos.push(input);
+            input = prompt("Ingresar los elementos deseados. Presionar 0 para finalizar");
+        }
+        for (let i = 0; i < elementos.length; i++) {
+            if (!isNaN(parseInt(elementos[i]))) {
+                numeros.push(parseInt(elementos[i]));
+            }
+        }
+
+        for (let i = 0; i < numeros.length - 1; i++) {
+            for (let j = 0; j < numeros.length - i - 1; j++) {
+                debugger;
+                if (numeros[j] < numeros[j + 1]) {
+                    let numTmp = numeros[j];
+                    numeros[j] = numeros[j + 1];
+                    numeros[j + 1] = numTmp;
+                }
+            }
+        }
+        console.log(numeros.join(","));
+    </script>
+</body>
+
+</html>

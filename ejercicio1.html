@@ -9,10 +9,10 @@
 
 <body>
     <script>
-        let numeroDeElementos = parseInt(prompt("Ingresar el número de elementos que desea manipular"));
+        let numeroDeElementos = parseInt(prompt("Ingresar el número de elementos que desea manipular."));
         let serieFibonacci = [0, 1];
         while (isNaN(numeroDeElementos) || typeof numeroDeElementos !== 'number' || numeroDeElementos < 3) {
-            numeroDeElementos = parseInt(prompt("Ingresar el número de elementos que desea manipular"));
+            numeroDeElementos = parseInt(prompt("Ingresar sólo números. Ingresar un número mayor que 2."));
         }
         for (let i = 2; i < numeroDeElementos; i++) {
             serieFibonacci[i] = serieFibonacci[i - 1] + serieFibonacci[i - 2];
